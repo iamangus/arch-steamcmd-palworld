@@ -35,4 +35,4 @@ RUN \
   steamcmd +quit
 
 ENTRYPOINT ["/home/steam/entrypoint.sh"]
-EXPOSE 8221
+EXPOSE 8211
