@@ -12,6 +12,10 @@ jobs:
 
     runs-on: ubuntu-latest
 
+    permissions:
+      contents: read
+      packages: write
+
     steps:
     - uses: actions/checkout@v2 # may be actions/checkout@v2 now
     - name: Login to github docker Registry
