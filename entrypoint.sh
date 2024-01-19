@@ -1,6 +1,9 @@
 #!/bin/bash
 GAME_DIR="/home/steam/palworld"
 
+# steamclient.so: cannot open shared object file: No such file or directory - expecting /home/steam/.steam/sdk64/steamclient.so
+cp /home/steam/.steam/steamcmd/linux64/steamclient.so /home/steam/.steam/sdk64/steamclient.so
+
 cd ${GAME_DIR}
 
 echo "-------------------------------INSTALL & UPDATE------------------------------"
