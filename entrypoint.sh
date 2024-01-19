@@ -7,4 +7,4 @@ echo "-------------------------------INSTALL & UPDATE---------------------------
 steamcmd +force_install_dir ${GAME_DIR} +login anonymous +app_update 2394010 validate +quit
 
 echo "----------------------------------START GAME---------------------------------"
-./PalServer.sh
+./PalServer.sh --useperfthreads -NoAsyncLoadingThread -UseMultithreadForDS
