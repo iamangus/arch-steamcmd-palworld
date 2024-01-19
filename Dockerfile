@@ -20,7 +20,10 @@ USER 1000
 ENV USER=steam
 WORKDIR /home/steam
 
+COPY entrypoint.sh /home/steam/entrypoint.sh
+
 RUN \
+  chmod  +x /home/steam/entrypoint.sh && \
   #install steamcmd
   git clone https://aur.archlinux.org/steamcmd.git && \
   cd steamcmd  && \
@@ -30,5 +33,5 @@ RUN \
 
 ENTRYPOINT bash
 
-ENTRYPOINT ["/usr/bin/entrypoint.sh"]
+ENTRYPOINT ["/home/steam/entrypoint.sh"]
 EXPOSE 8221
